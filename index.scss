@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #545050;
+}
+.student-manager{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    .Director-Panel{
+        width: 30%;
+        height: auto;
+        border-right: 1px solid grey;
+        .logo{
+            width: 200px;
+            height: 200px;
+            background-image: url('./assets/profile.png');
+            background-origin: border-box;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            border-radius: 50%;
+        }
+        .director-panel{
+            text-align: center;
+            font: {
+                family: 'Roboto', sans-serif;
+                size: 24px;
+                weight: bold;
+            };
+            text-transform: capitalize;
+            color: white;
+        }
+        .form{
+            width: 87%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 52px;
+            label{
+                @extend .director-panel;
+                font-size: 15px;
+                margin-top: 10px;
+                font-weight: normal;
+                &:nth-child(13){
+                    text-transform: none;
+                }
+            }
+            input{
+                width: 50%;
+                height: 32px;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 5px;
+                border: none;
+                margin-top: 5px;
+                padding-left: 10px;
+                text-align: center;
+                &:focus{
+                    outline: none;
+                }
+            }
+            .btn{
+                display: flex;
+                justify-content: center;
+                margin-top: 5px;
+                .add{
+                    width: 33%;
+                    height: 44px;
+                    border-radius: 5px;
+                    background: blue;
+                    color: white;
+                    border: none;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    cursor: pointer;
+                    &:active{
+                        transform: scale(0.98);
+                    }
+                }
+            }
+        }
+    }
+    .info-student{
+        width: 70%;
+        height: auto;
+        .table{
+            width: 95%;
+            margin-top: 20px;
+            height: 30px;
+            background: #403c3c;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            .thead{
+                tr{
+                    td{
+                        font: {
+                            family: 'Roboto', sans-serif;
+                            size: 16px;
+                            weight: bold;
+                        };
+                        border-right: 1px solid grey;
+                        border-top: 1px solid grey;
+                        border-bottom: 1px solid grey;
+                        padding: 10px;
+                        text-transform: capitalize;
+                        color: white;
+                        &:nth-child(8){
+                            text-transform: none;
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+            .tbody{
+                tr{
+                    width: auto;
+                    height: 50px;
+                    td{
+                        font: {
+                            family: 'Roboto', sans-serif;
+                            size: 13px;
+                            weight: bold;
+                        };
+                        color: white;
+                        border-right: 1px solid grey;
+                        border-top: 1px solid grey;
+                        border-bottom: 1px solid grey;
+                        &:nth-child(1){
+                            div{
+                                margin-left: auto;
+                                margin-right: auto;
+                                width: 20px; 
+                                height: 20px; 
+                                background-origin: border-box;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                border-radius: 50%;
+                            }
+                        }
+                        &:nth-child(2){
+                            text-transform: uppercase;
+                        }
+                        &:nth-child(7){
+                            text-transform: uppercase;
+                        }
+                        &:nth-child(8){
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1032px) {
+    .student-manager{
+        flex-wrap: wrap;
+        .Director-Panel{
+            width: 100%;
+        }
+        .info-student{
+            width: 100%;
+            .table{
+                .thead{
+                    tr{
+                        td{
+                            font: {
+                                size: 10px;
+                            };
+                        }
+                    }
+                }
+                .tbody{
+                    tr{
+                        width: auto;
+                        height: 50px;
+                        td{
+                            font: {
+                                size: 6px;
+                            };
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

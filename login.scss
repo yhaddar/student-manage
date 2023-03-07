@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.form{
+    width: 27%; 
+    height: auto; 
+    border-radius: 5px; 
+    border: 1px solid grey; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 100px; 
+    padding: 15px;
+    h1{
+        font: {
+            size: 36px;
+            family: 'Roboto', sans-serif;
+            weight: bold;
+        }
+        color: white;
+        text: {
+            align: center;
+            transform: capitalize;
+        }
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 920px) {
+    .form{
+        width: 99%; 
+    }
+}
