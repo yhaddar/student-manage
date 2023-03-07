@@ -1,10 +1,6 @@
 
 # students manager
 
-
-
-
-# students manager
 site for managing and recording student information
 ## Screenshots
 
